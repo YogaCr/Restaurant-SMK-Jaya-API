@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RestaurantSMKModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="DetailOrder">
+    <Key>
+      <PropertyRef Name="DetailId" />
+    </Key>
+    <Property Name="DetailId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrderId" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="MenuId" Type="Int32" Nullable="false" />
+    <Property Name="Qty" Type="Int32" Nullable="false" />
+    <Property Name="Price" Type="Int32" Nullable="false" />
+    <Property Name="Status" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="HeaderOrder" Relationship="Self.FK_DetailOrder_HeaderOrder" FromRole="DetailOrder" ToRole="HeaderOrder" />
+    <NavigationProperty Name="MsMenu" Relationship="Self.FK_DetailOrder_MsMenu" FromRole="DetailOrder" ToRole="MsMenu" />
+  </EntityType>
+  <EntityType Name="HeaderOrder">
+    <Key>
+      <PropertyRef Name="OrderId" />
+    </Key>
+    <Property Name="OrderId" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="EmployeeId" Type="String" MaxLength="6" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="MemberId" Type="String" MaxLength="8" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Payment" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Bank" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CardNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TableId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="DetailOrders" Relationship="Self.FK_DetailOrder_HeaderOrder" FromRole="HeaderOrder" ToRole="DetailOrder" />
+    <NavigationProperty Name="MsEmployee" Relationship="Self.FK_HeaderOrder_MsEmployee" FromRole="HeaderOrder" ToRole="MsEmployee" />
+    <NavigationProperty Name="MsMember" Relationship="Self.FK_HeaderOrder_MsMember" FromRole="HeaderOrder" ToRole="MsMember" />
+    <NavigationProperty Name="MsTable" Relationship="Self.FK_HeaderOrder_MsTable" FromRole="HeaderOrder" ToRole="MsTable" />
+  </EntityType>
+  <EntityType Name="MsEmployee">
+    <Key>
+      <PropertyRef Name="EmployeeId" />
+    </Key>
+    <Property Name="EmployeeId" Type="String" MaxLength="6" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Handphone" Type="String" MaxLength="13" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Position" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="HeaderOrders" Relationship="Self.FK_HeaderOrder_MsEmployee" FromRole="MsEmployee" ToRole="HeaderOrder" />
+  </EntityType>
+  <EntityType Name="MsMember">
+    <Key>
+      <PropertyRef Name="MemberId" />
+    </Key>
+    <Property Name="MemberId" Type="String" MaxLength="8" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Handphone" Type="String" MaxLength="13" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="JoinDate" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="HeaderOrders" Relationship="Self.FK_HeaderOrder_MsMember" FromRole="MsMember" ToRole="HeaderOrder" />
+  </EntityType>
+  <EntityType Name="MsMenu">
+    <Key>
+      <PropertyRef Name="MenuId" />
+    </Key>
+    <Property Name="MenuId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Price" Type="Int32" Nullable="false" />
+    <Property Name="Photo" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+    <NavigationProperty Name="DetailOrders" Relationship="Self.FK_DetailOrder_MsMenu" FromRole="MsMenu" ToRole="DetailOrder" />
+  </EntityType>
+  <EntityType Name="MsTable">
+    <Key>
+      <PropertyRef Name="TableId" />
+    </Key>
+    <Property Name="TableId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Status" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="HeaderOrders" Relationship="Self.FK_HeaderOrder_MsTable" FromRole="MsTable" ToRole="HeaderOrder" />
+  </EntityType>
+  <EntityType Name="MenuDetail">
+    <Key>
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Qty" />
+      <PropertyRef Name="Price" />
+      <PropertyRef Name="Total" />
+      <PropertyRef Name="OrderId" />
+    </Key>
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Qty" Type="Int32" Nullable="false" />
+    <Property Name="Price" Type="Int32" Nullable="false" />
+    <Property Name="Total" Type="Int32" Nullable="false" />
+    <Property Name="OrderId" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SelectMember">
+    <Key>
+      <PropertyRef Name="MemberId" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Email" />
+      <PropertyRef Name="Handphone" />
+      <PropertyRef Name="JoinDate" />
+    </Key>
+    <Property Name="MemberId" Type="String" MaxLength="8" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Handphone" Type="String" MaxLength="13" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="JoinDate" Type="DateTime" Nullable="false" Precision="0" />
+  </EntityType>
+  <Association Name="FK_DetailOrder_HeaderOrder">
+    <End Role="HeaderOrder" Type="Self.HeaderOrder" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="DetailOrder" Type="Self.DetailOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HeaderOrder">
+        <PropertyRef Name="OrderId" />
+      </Principal>
+      <Dependent Role="DetailOrder">
+        <PropertyRef Name="OrderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DetailOrder_MsMenu">
+    <End Role="MsMenu" Type="Self.MsMenu" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="DetailOrder" Type="Self.DetailOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MsMenu">
+        <PropertyRef Name="MenuId" />
+      </Principal>
+      <Dependent Role="DetailOrder">
+        <PropertyRef Name="MenuId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HeaderOrder_MsEmployee">
+    <End Role="MsEmployee" Type="Self.MsEmployee" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="HeaderOrder" Type="Self.HeaderOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MsEmployee">
+        <PropertyRef Name="EmployeeId" />
+      </Principal>
+      <Dependent Role="HeaderOrder">
+        <PropertyRef Name="EmployeeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HeaderOrder_MsMember">
+    <End Role="MsMember" Type="Self.MsMember" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="HeaderOrder" Type="Self.HeaderOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MsMember">
+        <PropertyRef Name="MemberId" />
+      </Principal>
+      <Dependent Role="HeaderOrder">
+        <PropertyRef Name="MemberId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HeaderOrder_MsTable">
+    <End Role="MsTable" Type="Self.MsTable" Multiplicity="1" />
+    <End Role="HeaderOrder" Type="Self.HeaderOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MsTable">
+        <PropertyRef Name="TableId" />
+      </Principal>
+      <Dependent Role="HeaderOrder">
+        <PropertyRef Name="TableId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="RestaurantSMKEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="DetailOrders" EntityType="Self.DetailOrder" />
+    <EntitySet Name="HeaderOrders" EntityType="Self.HeaderOrder" />
+    <EntitySet Name="MsEmployees" EntityType="Self.MsEmployee" />
+    <EntitySet Name="MsMembers" EntityType="Self.MsMember" />
+    <EntitySet Name="MsMenus" EntityType="Self.MsMenu" />
+    <EntitySet Name="MsTables" EntityType="Self.MsTable" />
+    <EntitySet Name="MenuDetails" EntityType="Self.MenuDetail" />
+    <EntitySet Name="SelectMembers" EntityType="Self.SelectMember" />
+    <AssociationSet Name="FK_DetailOrder_HeaderOrder" Association="Self.FK_DetailOrder_HeaderOrder">
+      <End Role="HeaderOrder" EntitySet="HeaderOrders" />
+      <End Role="DetailOrder" EntitySet="DetailOrders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DetailOrder_MsMenu" Association="Self.FK_DetailOrder_MsMenu">
+      <End Role="MsMenu" EntitySet="MsMenus" />
+      <End Role="DetailOrder" EntitySet="DetailOrders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HeaderOrder_MsEmployee" Association="Self.FK_HeaderOrder_MsEmployee">
+      <End Role="MsEmployee" EntitySet="MsEmployees" />
+      <End Role="HeaderOrder" EntitySet="HeaderOrders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HeaderOrder_MsMember" Association="Self.FK_HeaderOrder_MsMember">
+      <End Role="MsMember" EntitySet="MsMembers" />
+      <End Role="HeaderOrder" EntitySet="HeaderOrders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HeaderOrder_MsTable" Association="Self.FK_HeaderOrder_MsTable">
+      <End Role="MsTable" EntitySet="MsTables" />
+      <End Role="HeaderOrder" EntitySet="HeaderOrders" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

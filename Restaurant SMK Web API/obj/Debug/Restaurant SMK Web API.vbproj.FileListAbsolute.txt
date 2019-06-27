@@ -1,0 +1,81 @@
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\ApplicationInsights.config
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\roslyn\csc.exe
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\roslyn\csc.exe.config
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\roslyn\csc.rsp
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\roslyn\csi.exe
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\roslyn\csi.rsp
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\roslyn\Microsoft.CodeAnalysis.dll
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\roslyn\Microsoft.CSharp.Core.targets
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\roslyn\Microsoft.VisualBasic.Core.targets
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\roslyn\System.AppContext.dll
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\roslyn\System.Collections.Immutable.dll
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\roslyn\System.Diagnostics.StackTrace.dll
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\roslyn\System.IO.FileSystem.dll
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\roslyn\System.IO.FileSystem.Primitives.dll
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\roslyn\System.Reflection.Metadata.dll
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\roslyn\vbc.exe
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\roslyn\vbc.exe.config
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\roslyn\vbc.rsp
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\roslyn\VBCSCompiler.exe
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\roslyn\VBCSCompiler.exe.config
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\Restaurant SMK Web API.dll.config
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\Restaurant SMK Web API.dll
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\Restaurant SMK Web API.pdb
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\Restaurant SMK Web API.xml
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\Antlr3.Runtime.dll
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\EntityFramework.dll
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\EntityFramework.SqlServer.dll
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\Microsoft.AI.Agent.Intercept.dll
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\Microsoft.AI.DependencyCollector.dll
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\Microsoft.AI.PerfCounterCollector.dll
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\Microsoft.AI.ServerTelemetryChannel.dll
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\Microsoft.AI.Web.dll
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\Microsoft.AI.WindowsServer.dll
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\Microsoft.ApplicationInsights.dll
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\Microsoft.Web.Infrastructure.dll
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\Newtonsoft.Json.dll
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\System.Net.Http.Formatting.dll
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\System.Web.Helpers.dll
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\System.Web.Http.dll
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\System.Web.Http.WebHost.dll
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\System.Web.Mvc.dll
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\System.Web.Optimization.dll
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\System.Web.Razor.dll
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\System.Web.WebPages.Deployment.dll
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\System.Web.WebPages.dll
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\System.Web.WebPages.Razor.dll
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\WebGrease.dll
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\EntityFramework.xml
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\EntityFramework.SqlServer.xml
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\Newtonsoft.Json.xml
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\System.Net.Http.Formatting.xml
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\System.Web.Helpers.xml
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\System.Web.Http.xml
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\System.Web.Http.WebHost.xml
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\System.Web.Mvc.xml
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\System.Web.Optimization.xml
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\System.Web.Razor.xml
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\System.Web.WebPages.xml
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\System.Web.WebPages.Deployment.xml
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\System.Web.WebPages.Razor.xml
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\Antlr3.Runtime.pdb
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\Microsoft.ApplicationInsights.xml
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\Microsoft.AI.DependencyCollector.xml
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\Microsoft.AI.ServerTelemetryChannel.xml
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\Microsoft.AI.WindowsServer.xml
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\bin\Microsoft.AI.Web.xml
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\obj\Debug\Restaurant SMK Web API.vbprojResolveAssemblyReference.cache
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\obj\Debug\Restaurant_SMK_Web_API.Resources.resources
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\obj\Debug\Restaurant SMK Web API.vbproj.GenerateResource.Cache
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\obj\Debug\Restaurant SMK Web API.dll
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\obj\Debug\Restaurant SMK Web API.xml
+c:\users\smk telkom malang\documents\visual studio 2017\Projects\Restaurant SMK Web API\Restaurant SMK Web API\obj\Debug\Restaurant SMK Web API.pdb

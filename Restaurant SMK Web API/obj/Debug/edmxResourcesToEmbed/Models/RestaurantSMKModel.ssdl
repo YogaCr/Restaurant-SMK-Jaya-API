@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RestaurantSMKModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="DetailOrder">
+    <Key>
+      <PropertyRef Name="DetailId" />
+    </Key>
+    <Property Name="DetailId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OrderId" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="MenuId" Type="int" Nullable="false" />
+    <Property Name="Qty" Type="int" Nullable="false" />
+    <Property Name="Price" Type="int" Nullable="false" />
+    <Property Name="Status" Type="varchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HeaderOrder">
+    <Key>
+      <PropertyRef Name="OrderId" />
+    </Key>
+    <Property Name="OrderId" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="EmployeeId" Type="nchar" MaxLength="6" Nullable="false" />
+    <Property Name="MemberId" Type="nchar" MaxLength="8" Nullable="false" />
+    <Property Name="Date" Type="date" Nullable="false" />
+    <Property Name="Payment" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Bank" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CardNumber" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TableId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MsEmployee">
+    <Key>
+      <PropertyRef Name="EmployeeId" />
+    </Key>
+    <Property Name="EmployeeId" Type="nchar" MaxLength="6" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Handphone" Type="nvarchar" MaxLength="13" Nullable="false" />
+    <Property Name="Position" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MsMember">
+    <Key>
+      <PropertyRef Name="MemberId" />
+    </Key>
+    <Property Name="MemberId" Type="nchar" MaxLength="8" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Handphone" Type="nvarchar" MaxLength="13" Nullable="false" />
+    <Property Name="JoinDate" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MsMenu">
+    <Key>
+      <PropertyRef Name="MenuId" />
+    </Key>
+    <Property Name="MenuId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Price" Type="int" Nullable="false" />
+    <Property Name="Photo" Type="varbinary(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MsTable">
+    <Key>
+      <PropertyRef Name="TableId" />
+    </Key>
+    <Property Name="TableId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Status" Type="bit" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'RestaurantSMK.dbo.MenuDetail' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MenuDetail">
+    <Key>
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Qty" />
+      <PropertyRef Name="Price" />
+      <PropertyRef Name="Total" />
+      <PropertyRef Name="OrderId" />
+    </Key>
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Qty" Type="int" Nullable="false" />
+    <Property Name="Price" Type="int" Nullable="false" />
+    <Property Name="Total" Type="int" Nullable="false" />
+    <Property Name="OrderId" Type="nchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'RestaurantSMK.dbo.SelectMember' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="SelectMember">
+    <Key>
+      <PropertyRef Name="MemberId" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Email" />
+      <PropertyRef Name="Handphone" />
+      <PropertyRef Name="JoinDate" />
+    </Key>
+    <Property Name="MemberId" Type="nchar" MaxLength="8" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Handphone" Type="nvarchar" MaxLength="13" Nullable="false" />
+    <Property Name="JoinDate" Type="date" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_DetailOrder_HeaderOrder">
+    <End Role="HeaderOrder" Type="Self.HeaderOrder" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="DetailOrder" Type="Self.DetailOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HeaderOrder">
+        <PropertyRef Name="OrderId" />
+      </Principal>
+      <Dependent Role="DetailOrder">
+        <PropertyRef Name="OrderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DetailOrder_MsMenu">
+    <End Role="MsMenu" Type="Self.MsMenu" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="DetailOrder" Type="Self.DetailOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MsMenu">
+        <PropertyRef Name="MenuId" />
+      </Principal>
+      <Dependent Role="DetailOrder">
+        <PropertyRef Name="MenuId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HeaderOrder_MsEmployee">
+    <End Role="MsEmployee" Type="Self.MsEmployee" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="HeaderOrder" Type="Self.HeaderOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MsEmployee">
+        <PropertyRef Name="EmployeeId" />
+      </Principal>
+      <Dependent Role="HeaderOrder">
+        <PropertyRef Name="EmployeeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HeaderOrder_MsMember">
+    <End Role="MsMember" Type="Self.MsMember" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="HeaderOrder" Type="Self.HeaderOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MsMember">
+        <PropertyRef Name="MemberId" />
+      </Principal>
+      <Dependent Role="HeaderOrder">
+        <PropertyRef Name="MemberId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HeaderOrder_MsTable">
+    <End Role="MsTable" Type="Self.MsTable" Multiplicity="1" />
+    <End Role="HeaderOrder" Type="Self.HeaderOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MsTable">
+        <PropertyRef Name="TableId" />
+      </Principal>
+      <Dependent Role="HeaderOrder">
+        <PropertyRef Name="TableId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="RestaurantSMKModelStoreContainer">
+    <EntitySet Name="DetailOrder" EntityType="Self.DetailOrder" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HeaderOrder" EntityType="Self.HeaderOrder" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MsEmployee" EntityType="Self.MsEmployee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MsMember" EntityType="Self.MsMember" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MsMenu" EntityType="Self.MsMenu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MsTable" EntityType="Self.MsTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MenuDetail" EntityType="Self.MenuDetail" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [MenuDetail].[Name] AS [Name], 
+    [MenuDetail].[Qty] AS [Qty], 
+    [MenuDetail].[Price] AS [Price], 
+    [MenuDetail].[Total] AS [Total], 
+    [MenuDetail].[OrderId] AS [OrderId]
+    FROM [dbo].[MenuDetail] AS [MenuDetail]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="SelectMember" EntityType="Self.SelectMember" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [SelectMember].[MemberId] AS [MemberId], 
+    [SelectMember].[Name] AS [Name], 
+    [SelectMember].[Email] AS [Email], 
+    [SelectMember].[Handphone] AS [Handphone], 
+    [SelectMember].[JoinDate] AS [JoinDate]
+    FROM [dbo].[SelectMember] AS [SelectMember]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_DetailOrder_HeaderOrder" Association="Self.FK_DetailOrder_HeaderOrder">
+      <End Role="HeaderOrder" EntitySet="HeaderOrder" />
+      <End Role="DetailOrder" EntitySet="DetailOrder" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DetailOrder_MsMenu" Association="Self.FK_DetailOrder_MsMenu">
+      <End Role="MsMenu" EntitySet="MsMenu" />
+      <End Role="DetailOrder" EntitySet="DetailOrder" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HeaderOrder_MsEmployee" Association="Self.FK_HeaderOrder_MsEmployee">
+      <End Role="MsEmployee" EntitySet="MsEmployee" />
+      <End Role="HeaderOrder" EntitySet="HeaderOrder" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HeaderOrder_MsMember" Association="Self.FK_HeaderOrder_MsMember">
+      <End Role="MsMember" EntitySet="MsMember" />
+      <End Role="HeaderOrder" EntitySet="HeaderOrder" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HeaderOrder_MsTable" Association="Self.FK_HeaderOrder_MsTable">
+      <End Role="MsTable" EntitySet="MsTable" />
+      <End Role="HeaderOrder" EntitySet="HeaderOrder" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
